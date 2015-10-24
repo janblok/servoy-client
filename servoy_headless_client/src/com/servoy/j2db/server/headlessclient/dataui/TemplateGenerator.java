@@ -1491,7 +1491,7 @@ public class TemplateGenerator
 		styleObj.setProperty("height", "16px");
 	}
 
-	public static String getStyleCSS(String name) throws RepositoryException, RemoteException
+	public static String getStyleCSS(String name) throws RepositoryException
 	{
 		if (name != null && name.toLowerCase().endsWith(".css"))
 		{
@@ -1553,7 +1553,15 @@ public class TemplateGenerator
 		styleObj.setProperty("padding", createInsetsText(DEFAULT_BUTTON_PADDING));
 		styleObj.setProperty("overflow", "hidden");
 
-		Style s = (Style)ApplicationServerRegistry.get().getLocalRepository().getActiveRootObject(name, IRepository.STYLES);
+		Style s = null;
+		try
+		{
+			s = (Style)ApplicationServerRegistry.get().getLocalRepository().getActiveRootObject(name, IRepository.STYLES);
+		}
+		catch (RemoteException e1)
+		{
+			//will never happen;
+		}
 		boolean bodyMarginAdded = false;
 		if (s != null)
 		{
