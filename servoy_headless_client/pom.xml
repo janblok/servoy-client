@@ -1,0 +1,45 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	
+	<parent>
+		<groupId>com.servoy</groupId>
+		<artifactId>com.servoy-client.bom</artifactId>
+		<version>8.0.0.3013</version>
+	</parent>
+	
+	<artifactId>servoy_headless_client</artifactId>
+
+	<name>Servoy Headless client</name>
+    <packaging>eclipse-plugin</packaging>
+	
+	<url>http://www.servoy.com</url>
+
+	<dependencies>
+		<dependency>
+			<groupId>com.servoy</groupId>
+			<artifactId>servoy_shared</artifactId>
+			<version>${project.version}</version>
+		</dependency>		
+		<dependency>
+			<groupId>com.servoy</groupId>
+			<artifactId>servoy_smart_client</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.servoy</groupId>
+			<artifactId>org.eclipse.dltk.javascript.rhino</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-api</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>javax.servlet-api</artifactId>
+			<version>3.1.0</version>
+		</dependency>
+	</dependencies>
+</project>

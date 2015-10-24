@@ -1,0 +1,43 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	
+	<parent>
+		<groupId>com.servoy</groupId>
+		<artifactId>com.servoy-client.bom</artifactId>
+		<version>8.0.0.3013</version>
+	</parent>
+	
+	<artifactId>servoy_smart_client</artifactId>
+
+	<name>Servoy Smart client</name>
+    <packaging>eclipse-plugin</packaging>
+	
+	<url>http://www.servoy.com</url>
+
+	<dependencies>
+		<dependency>
+			<groupId>com.servoy</groupId>
+			<artifactId>servoy_shared</artifactId>
+			<version>${project.version}</version>
+		</dependency>		
+		<dependency>
+			<groupId>com.servoy</groupId>
+			<artifactId>org.eclipse.dltk.javascript.rhino</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+		
+		<dependency>
+		  <groupId>javax.jnlp</groupId>
+		  <artifactId>jnlp-api</artifactId>
+		  <version>7.0</version>
+		  <scope>system</scope>
+		  <systemPath>${java.home}/lib/javaws.jar</systemPath>
+		</dependency>
+	
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-api</artifactId>
+		</dependency>
+	</dependencies>
+</project>
