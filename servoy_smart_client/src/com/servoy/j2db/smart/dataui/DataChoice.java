@@ -56,8 +56,6 @@ import javax.swing.event.ListDataEvent;
 import javax.swing.event.ListDataListener;
 import javax.swing.text.Document;
 
-import sun.java2d.SunGraphics2D;
-
 import com.servoy.base.util.ITagResolver;
 import com.servoy.j2db.IApplication;
 import com.servoy.j2db.IScriptExecuter;
@@ -1547,12 +1545,7 @@ public class DataChoice extends EnableScrollPanel implements IDisplayData, IFiel
 	@Override
 	public void paint(Graphics g)
 	{
-		// If we have regular SunGraphics2D object, just forward to superclass.
-		if (g instanceof SunGraphics2D)
-		{
-			super.paint(g);
-		}
-		else
+
 		{
 			// If we are on Mac OS, we paint first to image buffer and then
 			// to actual graphics. This is because the Aqua L&F on Mac does
